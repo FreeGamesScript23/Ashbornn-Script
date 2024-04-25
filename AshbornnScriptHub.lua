@@ -15,6 +15,7 @@ local Window = Fluent:CreateWindow({
 --Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
 local Tabs = {
     Main = Window:AddTab({ Title = "Main", Icon = "" }),
+    GameHub = Window:AddTab({ Title = "Main", Icon = "" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
 
@@ -49,6 +50,30 @@ do
                         Title = "Confirm",
                         Callback = function()
                             print("Confirmed the dialog.")
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
+    Tabs.GameHub:AddButton({
+        Title = "LumberTycoon",
+        Description = "Lumber Tycoon 2 Script",
+        Callback = function()
+            Window:Dialog({
+                Title = "Execute this script?",
+                Content = "Lumber tycoon 2 Script(ButterHub)",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            print("Lumber Tycoon 2 Script Clicked!")
                         end
                     },
                     {
