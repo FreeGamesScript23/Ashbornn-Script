@@ -15,7 +15,7 @@ local Window = Fluent:CreateWindow({
 --Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
 local Tabs = {
     Main = Window:AddTab({ Title = "Main", Icon = "" }),
-    GameHub = Window:AddTab({ Title = "Main", Icon = "" }),
+    GameHub = Window:AddTab({ Title = "Gamehub", Icon = "" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
 
@@ -87,6 +87,130 @@ do
         end
     })
 
+    Tabs.GameHub:AddButton({
+        Title = "Jailbreak AutoRob",
+        Description = "Jailbreak OG AutoRob",
+        Callback = function()
+            Window:Dialog({
+                Title = "Execute this script?",
+                Content = "Jailbreak OG AutoRob",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            print("AutoRob CLick")
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
+
+    Tabs.GameHub:AddButton({
+        Title = "The Mimic",
+        Description = "All Chapter Script",
+        Callback = function()
+            Window:Dialog({
+                Title = "Execute this script?",
+                Content = "The Mimic(Jealousy Chapter 3 Update)",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            print("Mimic")
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
+
+    Tabs.GameHub:AddButton({
+        Title = "The Mimic",
+        Description = "All Chapter Script",
+        Callback = function()
+            Window:Dialog({
+                Title = "Execute this script?",
+                Content = "The Mimic(Jealousy Chapter 3 Update)",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            print("Mimic")
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
+
+    Tabs.GameHub:AddButton({
+        Title = "SwordBurst 3",
+        Description = "FallAngelHub SwordBurst 3",
+        Callback = function()
+            Window:Dialog({
+                Title = "SwordBurst 3",
+                Content = "Floor 4 Update SwordBurst 3",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            print("SwordBurst 3")
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
+
+    Tabs.GameHub:AddButton({
+        Title = "SwordBurst 3",
+        Description = "FallAngelHub SwordBurst 3",
+        Callback = function()
+            Window:Dialog({
+                Title = "SwordBurst 3",
+                Content = "Floor 4 Update SwordBurst 3",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            print("lol")
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
 
 
     local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "Toggle", Default = false })
