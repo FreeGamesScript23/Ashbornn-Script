@@ -16,6 +16,7 @@ local Window = Fluent:CreateWindow({
 local Tabs = {
     Main = Window:AddTab({ Title = "Main", Icon = "" }),
     GameHub = Window:AddTab({ Title = "Gamehub", Icon = "" }),
+    Hubs = Window:AddTab({ Title = "ScriptHub", Icon = "" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
 
@@ -149,6 +150,31 @@ do
                         Title = "Confirm",
                         Callback = function()
                             print("Mimic")
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
+
+    Tabs.Hubs:AddButton({
+        Title = "Infinite Yield",
+        Description = "Best For All Games(Not all tbh)",
+        Callback = function()
+            Window:Dialog({
+                Title = "Execute this script?",
+                Content = "Infinite Yield",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
                         end
                     },
                     {
