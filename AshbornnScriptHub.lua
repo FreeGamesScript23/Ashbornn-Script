@@ -16,7 +16,7 @@ local Window = Fluent:CreateWindow({
 local Tabs = {
     Main = Window:AddTab({ Title = "Main", Icon = "" }),
     GameHub = Window:AddTab({ Title = "Gamehub", Icon = "" }),
-    Hubs = Window:AddTab({ Title = "ScriptHub", Icon = "" }),
+    YeetHub = Window:AddTab({ Title = "ScriptHub", Icon = "" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
 
@@ -163,7 +163,7 @@ do
         end
     })
 
-    Tabs.Hubs:AddButton({
+    Tabs.YeetHub:AddButton({
         Title = "Infinite Yield",
         Description = "Best For All Games(Not all tbh)",
         Callback = function()
